@@ -1,0 +1,18 @@
+
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+<div style="text-align:center">
+  <h1>
+     {{ title }}!
+  </h1>
+  </div>
+
+  <button type="button" class="btn btn-primary" (click)="reset()">New Game</button>
+  <h2><span class="label label-primary">{{ getPlayerName()}} </span></h2>
+<p></p>
+<div *ngFor="let row of rows">
+  <app-cell *ngFor="let col of row" [row]="col.row" [col]="col.col" [cellState]="col.state"
+    [validTurn]="yourTurn" [winningCell]="col.winningCell"
+    (stateChangeRequested)="stateChange(col)"></app-cell>
+</div>
+</div>

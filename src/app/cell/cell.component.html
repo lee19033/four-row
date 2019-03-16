@@ -1,0 +1,7 @@
+<div [style.font-size]="cellState === 0 ? '1.0em' : '3.0em'"
+     [style.color]="cellState === 1 ? 'red' : 'black'"
+     [style.cursor]="cellState === 0 ? 'pointer' : 'not-allowed'"
+     [style.background]="cellState === 1 ? 'red' : cellState ===2 ? 'blue' : 'white'"
+     (click)="set()">
+     
+</div>
